@@ -2,11 +2,8 @@ import React from 'react';
 import classes from './Profile.module.css';
 import MyPosts from "./MyPosts/MyPosts";
 
-type ProfilePropsType = {
-    message: string
-}
 
-const Profile = (props: ProfilePropsType) => {
+const Profile = () => {
     return (
         <div className={classes.content}>
             <div>
@@ -16,7 +13,7 @@ const Profile = (props: ProfilePropsType) => {
             <div>
                 ava + description
             </div>
-            <MyPosts message={'Posts'}/>
+            <MyPosts/>
         </div>
     );
 }

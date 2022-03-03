@@ -2,11 +2,7 @@ import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from "./Post/Post";
 
-type MyPostsPropsType = {
-    message: string
-}
-
-const MyPosts = (props: MyPostsPropsType) => {
+const MyPosts = () => {
     return (
         <div>
             My posts
