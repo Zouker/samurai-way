@@ -1,23 +1,39 @@
 import React from 'react';
-import classes from './Navbar.module.css';
+import s from './Navbar.module.css';
+import {NavLink} from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className={classes.nav}>
-            <div className={classes.item}>
-                <a>Profile</a>
+        <nav className={s.nav}>
+            <div className={`${s.item} ${s.active}`}>
+                <NavLink
+                    to={'/profile'}
+                    className={({isActive}) => isActive ? s.active : s.item}
+                >Profile</NavLink>
             </div>
-            <div className={`${classes.item} ${classes.active}`}>
-                <a>Messages</a>
+            <div className={s.item}>
+                <NavLink
+                    to={'/dialogs'}
+                    className={({isActive}) => isActive ? s.active : s.item}
+                >Messages</NavLink>
             </div>
-            <div className={classes.item}>
-                <a>News</a>
+            <div className={s.item}>
+                <NavLink
+                    to={'/news'}
+                    className={({isActive}) => isActive ? s.active : s.item}
+                >News</NavLink>
             </div>
-            <div className={classes.item}>
-                <a>Music</a>
+            <div className={s.item}>
+                <NavLink
+                    to={'/music'}
+                    className={({isActive}) => isActive ? s.active : s.item}
+                >Music</NavLink>
             </div>
-            <div className={classes.item}>
-                <a>Settings</a>
+            <div className={s.item}>
+                <NavLink
+                    to={'/settings'}
+                    className={({isActive}) => isActive ? s.active : s.item}
+                >Settings</NavLink>
             </div>
         </nav>
     );
