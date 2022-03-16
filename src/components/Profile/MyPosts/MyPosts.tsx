@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
-import {PostsType} from '../../../index';
+import state, {PostsType} from '../../../redux/state';
 
 type PropsType = {
     posts: Array<PostsType>
@@ -9,7 +9,7 @@ type PropsType = {
 
 const MyPosts = (props: PropsType) => {
 
-    let postsElements = props.posts.map(p => <Post key={p.id} message={p.message} likesCount={p.likesCount}/>)
+    let postsElements = state.profilePage.posts.map(p => <Post key={p.id} id={p.id} message={p.message} likesCount={p.likesCount}/>)
 
     return (
         <div className={s.postsBlock}>
