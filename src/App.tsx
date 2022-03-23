@@ -12,6 +12,7 @@ import state, {RootStateType} from './redux/state';
 
 type PropsType = {
     state: RootStateType
+    addPost: (postMessage: string) => void
 }
 
 function App(props: PropsType) {
